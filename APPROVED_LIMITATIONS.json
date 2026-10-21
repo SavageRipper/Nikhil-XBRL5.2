@@ -1,0 +1,16 @@
+{
+  "note": "Known release limitations. The release gate passes only when every UNIMPLEMENTED rule listed here has approved=true, set by the release owner (not by the build). An approved rule is still never executed: it is shown as 'APPROVED LIMITATION / NOT EXECUTED' and is never reported as an MCA validation PASS.",
+  "limitations": [
+    {
+      "id": "ML-20-b",
+      "kind": "rule",
+      "description": "Mandatory Line Items row 20 (complete V1.3 workbook, identical text in both ML sheets), clause 'In OutstandingBalancesForRelatedPartyTransactionsAbstract- Element for amount shall be mandatory for various transactions' does not identify which amount elements are required; the 'Specific rules for elements' sheet has no rule text for OutstandingBalancesForRelatedPartyTransactionsAbstract (row 2118). Needs MCA clarification.",
+      "approved": false,
+      "approvedBy": null,
+      "evidence": [
+        "MCA-validated reference instances (34 related-party rows): no outstanding-balance amount (AmountsPayable/AmountsReceivable/ProvisionsForDoubtfulDebts/ShareApplicationMoney/MaximumAmount\u2026) in any row \u2014 MCA's validator does not require one per row."
+      ],
+      "recommendation": "Approve as a documented limitation (approved=true, approvedBy=<release owner>) or obtain MCA clarification. Any executable reading that requires an outstanding-balance amount would reject both MCA-validated instances."
+    }
+  ]
+}

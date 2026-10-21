@@ -1,0 +1,54 @@
+{
+  "note": "Evidence from reference instance documents that pass the MCA XBRL Validator that contradicts a formalized rule. Each listed rule keeps executing but is reported as WARNING instead of a blocking ERROR, with this evidence attached. Remove an entry to make the rule blocking again.",
+  "schemaRefs": [
+    {
+      "href": "https://www.mca.gov.in/V3XBRL/2016/07/26/Taxonomy/CnI/in-ci-ent-2016-03-31.xsd",
+      "evidence": "Reference instances validated by the MCA XBRL Validator (FY 2024-25) use this schemaRef"
+    }
+  ],
+  "rules": [
+    {
+      "ruleId": "CH-4",
+      "evidence": "A reference instance (FY starting 2024-04-01) was validated without NameOfMainProductOrService"
+    },
+    {
+      "ruleId": "CH-5",
+      "evidence": "A reference instance was validated without DescriptionOfMainProductOrService"
+    },
+    {
+      "ruleId": "CH-6",
+      "evidence": "A reference instance was validated without NICCodeOfProductOrService"
+    },
+    {
+      "ruleId": "SR-L3996-1",
+      "evidence": "A reference instance (FY starting 2024-04-01) was validated without NameOfMainProductOrService (same requirement as CH-4)"
+    },
+    {
+      "ruleId": "SR-L3997-1",
+      "evidence": "A reference instance was validated without DescriptionOfMainProductOrService (same requirement as CH-5)"
+    },
+    {
+      "ruleId": "SR-L3998-1",
+      "evidence": "A reference instance was validated without NICCodeOfProductOrService (same requirement as CH-6)"
+    },
+    {
+      "ruleId": "SR-L2537-2",
+      "evidence": "A reference instance was validated with WhetherCompanyHasSubsidiaryCompanies=false and NumberOfSubsidiaryCompanies=0, so 'greater than zero' is not enforced unconditionally"
+    },
+    {
+      "ruleId": "SR-L2116-1",
+      "evidence": "A reference instance was validated with a Key Management Personnel related party (transaction Commission) without RemunerationForKeyManagerialPersonnel. The rule text quotes 'Key managerial Personnel', which is not a value of the taxonomy enumeration ('Key Management Personnel')."
+    },
+    {
+      "ruleId": "SR-L4140-1",
+      "evidence": "Instances of a company with a secretarial audit firm, without FirmsRegistrationNumberOfSecretarialAuditFirm, were accepted by MCA (FY 2024-25) and passed the MCA XBRL Validator V5.1 without this message (FY 2025-26)"
+    },
+    {
+      "ruleId": "ML-41",
+      "concepts": [
+        "in-ca:DatesOfApprovalOfMaterialContractsArrangementsTransactionsWithRelatedPartyByBoard"
+      ],
+      "evidence": "An instance accepted by MCA (FY 2024-25) reports material contracts with related parties approved by the Board without DatesOfApprovalOfMaterialContractsArrangementsTransactionsWithRelatedPartyByBoard"
+    }
+  ]
+}
